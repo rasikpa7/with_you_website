@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Allow anyone to submit early access emails
+    match /early_access_emails/{emailId} {
+      allow create: if request.auth == null 
+        && request.resource.data.email is string
+        && request.resource.data.email.matches('.*@.*\\..*')
+        && request.resource.data.keys().hasOnly(['email', 'timestamp', 'source', 'userAgent']);
+      allow read, update, delete: if false;
+    }
+    
+    // Default deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

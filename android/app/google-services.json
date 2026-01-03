@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385251936780",
+    "project_id": "withyou-4e041",
+    "storage_bucket": "withyou-4e041.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385251936780:android:c7d9bab562b4da2dbc3c29",
+        "android_client_info": {
+          "package_name": "com.example.withyou"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCCZlzkGK9EshkDP0ygI-cGC_jqGZoEoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
