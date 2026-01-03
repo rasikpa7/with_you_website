@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:withyou/presentation/controllers/couple_controller.dart';
 import 'package:withyou/core/theme/app_theme.dart';
 
 class CoupleSetupScreen extends StatelessWidget {

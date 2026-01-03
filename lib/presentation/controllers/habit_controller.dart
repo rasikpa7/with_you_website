@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:withyou/data/services/firestore_service.dart';
 import 'package:withyou/data/models/habit_model.dart';
 import 'package:withyou/presentation/controllers/auth_controller.dart';
-import 'package:withyou/core/constants/app_constants.dart';
 
 class HabitController extends GetxController {
   final FirestoreService _firestoreService = FirestoreService();

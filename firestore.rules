@@ -11,6 +11,16 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
     
+    // Allow anyone to submit feedback
+    match /feedback/{feedbackId} {
+      allow create: if request.auth == null 
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0
+        && request.resource.data.type is string
+        && request.resource.data.keys().hasOnly(['name', 'email', 'type', 'message', 'timestamp', 'source', 'userAgent']);
+      allow read, update, delete: if false;
+    }
+    
     // Default deny all other access
     match /{document=**} {
       allow read, write: if false;
